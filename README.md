@@ -7,4 +7,4 @@ Mã đoạn code của bảng tổng hợp
 turnover= pd.pivot_table(df,index='month', columns='year', values='payment_value', aggfunc=np.sum, fill_value=0).reset_index(drop= False)
 ```
 Output: 
-[tên ảnh](https://imgur.com/a/qoCrlsm)
+![tên ảnh](https://imgur.com/a/qoCrlsm)
