@@ -133,4 +133,24 @@ Output:
 
 ![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/299161731_390536316495381_2087884427408624672_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=69DWnicjnq8AX8qLcRk&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVJR2Ms9BC-jhlW6WDIGTZxcdZ5ZjwB6OyWZyQyBEAGekw&oe=632123DF)
 
--Đây là những danh sách nhóm sản phẩm bị đánh giá 1 và 2 điểm chúng ta phải tìm hiểu nguyên nhân từ những id của người bán hàng(seller_id) tại sao khách hàng lại đánh giá 1 và 2 điểm có số điểm thấp đến như vậy, sau khi tìm hiểu nguyên nhân và khắc phục nếu mà những id người bán hàng này bán sản phẩm mà khách hàng vẫn còn đánh giá 1 và điểm nhiều nữa thì chúng ta cần phải xem xét và xử lý việc này , tại vì khi mà khách hàng muốn mua một sản phẩm nào đó mà họ nhìn thấy những lượt chấm của những khách hàng thấp đến như vậy thì họ sẽ e ngại và k còn mua nữa, từ đó lượng khách hàng dùng cái dịch vụ thương mại điện tử của mình để mua hangfsex bị giảm xuống, chính vì thế mà chúng ta cần phải khắc phục việc người bán hàng giao đến những sản phẩm hư hỏng cho khách hàng.
+-Đây là những danh sách nhóm sản phẩm bị đánh giá 1 và 2 điểm chúng ta phải tìm hiểu nguyên nhân từ những id của người bán hàng(seller_id) tại sao khách hàng lại đánh giá 1 và 2 điểm có số điểm thấp đến như vậy, sau khi tìm hiểu nguyên nhân và khắc phục nếu mà những id người bán hàng này bán sản phẩm mà khách hàng vẫn còn đánh giá 1 và điểm nhiều nữa thì chúng ta cần phải xem xét và xử lý việc này , tại vì khi mà khách hàng muốn mua một sản phẩm nào đó mà họ nhìn thấy những lượt chấm của những khách hàng thấp đến như vậy thì họ sẽ e ngại và k còn mua nữa, từ đó lượng khách hàng dùng cái dịch vụ thương mại điện tử của mình để mua hàng sẽ bị giảm xuống, chính vì thế mà chúng ta cần phải khắc phục việc người bán hàng giao đến những sản phẩm hư hỏng hoặc những sản phẩm kém chất lượng cho khách hàng.
+
+### 7. Danh sách id người bán có lượt đánh giá 1 và 2 sao.
+```php
+star12.groupby('seller_id')['review_score'].count().sort_values(ascending=False).nlargest(10).reset_index()
+```
+Output:
+
+![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/290608499_777055483432470_4269814101361728412_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=OUcv43ALdGoAX-q1jo1&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVJSpdA4S7AHDrfcxBW61GSoJJ7HwXlE8njWQtt0Aejnqg&oe=63230A5E)
+
+Đây là những danh sách id người bán có bán lượt rating 1 và 2 điểm, đối với trường hợp này thì công ty sẽ khuyên các id người bán này bằng những cách sau :
+    
+   _Đích thân cái người bán phải xin lỗi khách hàng đó là lẽ tất yếu vì những sản phẩm của mình không được tốt và chưa làm hài lòng khách hàng nên khi shop hoặc id người bán đó đích thân phản hồi xin lỗi thì khách hàng sẽ thấy được thiện chí của id người và có thể sẽ thông cảm được.
+   _ Có thể tặng hoặc đền bù cho khách một sản phẩm khác đẻ họ dễ dàng chấp nhận hơn.
+   _ Đổi trả sản phẩm cho khách, thậm chí là hoàn tiền.
+ 
+Và công ty nên nói với nững id khách hàng đó khi mà bị đánh giá 1 và 2 sao thì số điểm thấp đó bị đẩy lên và sẽ làm hang mang cho những khách khác khi thấy lượt điểm thấp như vậy, họ sẽ mất niềm tin vào sản phẩm,có sự nghi ngờ về chất lượng và không đưa ra quyết định mua hàng sẽ làm cho doanh số đi xuống đơn hàng sẽ không còn được bán nhiều nữa, và đặc biệt là họ phải tự cải thiện sản phẩm của mình.
+
+###
+
+
