@@ -133,7 +133,7 @@ Output:
 
 ![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/299161731_390536316495381_2087884427408624672_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=69DWnicjnq8AX8qLcRk&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVJR2Ms9BC-jhlW6WDIGTZxcdZ5ZjwB6OyWZyQyBEAGekw&oe=632123DF)
 
--Đây là những danh sách nhóm sản phẩm bị đánh giá 1 và 2 điểm chúng ta phải tìm hiểu nguyên nhân từ những id của người bán hàng(seller_id) tại sao khách hàng lại đánh giá 1 và 2 điểm có số điểm thấp đến như vậy, sau khi tìm hiểu nguyên nhân và khắc phục nếu mà những id người bán hàng này bán sản phẩm mà khách hàng vẫn còn đánh giá 1 và điểm nhiều nữa thì chúng ta cần phải xem xét và xử lý việc này , tại vì khi mà khách hàng muốn mua một sản phẩm nào đó mà họ nhìn thấy những lượt chấm của những khách hàng thấp đến như vậy thì họ sẽ e ngại và k còn mua nữa, từ đó lượng khách hàng dùng cái dịch vụ thương mại điện tử của mình để mua hàng sẽ bị giảm xuống, chính vì thế mà chúng ta cần phải khắc phục việc người bán hàng giao đến những sản phẩm hư hỏng hoặc những sản phẩm kém chất lượng cho khách hàng.
+-Đây là những danh sách nhóm sản phẩm bị đánh giá 1 và 2 điểm chúng ta phải tìm hiểu nguyên nhân từ những id của người bán hàng(seller_id) tại sao khách hàng lại đánh giá 1 và 2 điểm có số điểm thấp đến như vậy, chúng ta cần phải thu tập những  phản hồi của khách hàng, sau khi tìm hiểu nguyên nhân và khắc phục nếu mà những id người bán hàng này bán sản phẩm mà khách hàng vẫn còn đánh giá 1 và 2 điểm nhiều nữa thì chúng ta cần phải xem xét và xử lý việc này , tại vì khi mà khách hàng muốn mua một sản phẩm nào đó mà họ nhìn thấy những lượt chấm của những khách hàng thấp đến như vậy thì họ sẽ e ngại và k còn mua nữa, từ đó lượng khách hàng dùng cái dịch vụ thương mại điện tử của mình để mua hàng sẽ bị giảm xuống, chính vì thế mà chúng ta cần phải khắc phục việc người bán hàng giao đến những sản phẩm hư hỏng hoặc những sản phẩm kém chất lượng cho khách hàng. Do vậy, qua những phản hồi từ khách hàng, doanh nghiệp sẽ có cơ hội để hoàn thiện và làm thỏa mãn thị trường với những sản phẩm có giá trị hơn.
 
 ### 7. Danh sách id người bán có lượt đánh giá 1 và 2 sao.
 ```php
@@ -149,8 +149,41 @@ Output:
    _ Có thể tặng hoặc đền bù cho khách một sản phẩm khác đẻ họ dễ dàng chấp nhận hơn.
    _ Đổi trả sản phẩm cho khách, thậm chí là hoàn tiền.
  
-Và công ty nên nói với nững id khách hàng đó khi mà bị đánh giá 1 và 2 sao thì số điểm thấp đó bị đẩy lên và sẽ làm hang mang cho những khách khác khi thấy lượt điểm thấp như vậy, họ sẽ mất niềm tin vào sản phẩm,có sự nghi ngờ về chất lượng và không đưa ra quyết định mua hàng sẽ làm cho doanh số đi xuống đơn hàng sẽ không còn được bán nhiều nữa, và đặc biệt là họ phải tự cải thiện sản phẩm của mình.
+Và công ty nên nói với nững id người bán đó khi mà bị đánh giá 1 và 2 sao thì số điểm thấp đó bị đẩy lên và sẽ làm hang mang cho những khách khác khi thấy lượt điểm thấp như vậy, họ sẽ mất niềm tin vào sản phẩm,có sự nghi ngờ về chất lượng và không đưa ra quyết định mua hàng sẽ làm cho doanh số đi xuống đơn hàng sẽ không còn được bán nhiều nữa, và đặc biệt là họ phải tự cải thiện sản phẩm của mình.
 
-###
+### 8. Những khách hàng có số lần đặt hàng nhiều nhất.
+```php
+df.groupby('customer_id')['order_id'].count().sort_values(ascending=False).head(10).to_frame()
+```
+Output:
+
+![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/293642595_562114019042723_5262240882150269008_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=fdgqvoFyGowAX-aRDNM&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVJbF71WgCqmo1owq5rU2pAGGOplXqp7bXDQ5pR8bWxCKw&oe=632274FE)
+- Đây là danh sách những khách có số lần đặt hàng nhiều nhất ở công ty, họ là những người tin tưởng những sản phẩm ở công ty nên cần phải chú trọng chăm sóc họ thường xuyên để họ không rời bỏ việc mua sản phẩm bên công ty mình.
+
+Thông thường, người tiêu dùng đều có xu hướng lựa chọn mua hàng theo số đông. Vì vậy, khi một doanh nghiệp làm hài lòng nhóm khách hàng hiện tại, những người này sẽ đóng vai trò làm trung gian giới thiệu sản phẩm/ dịch vụ với những người quen biết của mình. Một cách vô tình, những khách hàng trung thành đã trở thành những nhân viên bán hàng cho sản phẩm của doanh nghiệp họ tin tưởng. 
+Điều này sẽ mang ý nghĩa sống còn với các doanh nghiệp kinh doanh thời đại 4.0, nơi sức mạnh của phương pháp marketing truyền miệng đang được thổi bùng cùng với sự phát triển của internet. Gần như chỉ cần chăm sóc tốt khách hàng hiện tại, bạn sẽ lại có thêm khách hàng mới.
+
+### 9. Danh sách những khách hàng đem lại doanh thu cao nhất cho công ty.
+![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/298147197_807309750277390_8941411742428927528_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=G0CQOvz2UX8AX8NefPQ&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVIBWnB6aM6XoZggImepUoEYL5sxc-glYpMfWwFFiM7IqA&oe=6321AAEE)
+
+-Đây là top 10 khách hàng đem lại chủ yếu doanh thu cho công ty, chúng ta cần chú ý và chăm sóc đặc biệt những khách hàng này nhiều hơn để họ không rời bỏ dịch vụ của mình, và cần tạo ra những cái voucher khuyến mãi tối ửu để có khuyến khích họ mua hàng của mình, vì họ là nguồn thu nhập chính của công ty nếu không chăm sóc tốt họ sẽ rời bỏ khi đó doanh thu công ty sẽ đi xuống. Tuy khách đặt hàng ở công ty nhiều nhưng dựa vào biểu đồ pareto thì thấy đucợ chỉ có 20% khách hàng đó đem lại chủ yêu 80% lợi nhuận của công ty nên vì thế cần phải chăm sóc đặt biệt những vị khách hàng này.
+
+### 10. Phần trăm khách hàng trả hóp và thanh toán một lần.
+![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/299424191_1820247374984406_4949406095906604947_n.png?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=TcrlZJyMFFcAX9JhOfq&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVIZwmCB3_iOnUcxZnOg4BzEKYtRsXsstJfsbg4b5y7mEA&oe=63242986)
+
+-Số lần thanh toán một lần và thanh toán trả góp gần như tương đương nhau, nhưng đối với khách hàng trả góp chúng ta cần phải chú ý và cần nhắc nhở họ để học trả nợ và lãi đúng hạn, để tránh trường hợp làm phiền cả đôi bên mình phải gị điện và nhắn tin với họ và hpj sẽ cụng bị phiền bởi bởi những tin nhắn của mình và lãi của họ sẽ bị gia tăng theem nếu không trả đúng hạn.
+
+###11. Những thành phố đem lại doanh thu cao nhất cho công ty
+```php
+df.groupby('customer_city')['payment_value'].sum().sort_values(ascending=False).to_frame().head(10)
+```
+Output:
+![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/295633015_837910750961643_107388182019235943_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=zRIOspSnbOoAX85A472&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVI8pdw7nFgYMxEL_FskAcPJjMfum3uGjRjTq2d1b9iAuA&oe=63231ACD)
+
+- Doanh thu của thành phố chủ yếu tập trung ở những thành phố này, chứng tỏ khách hàng chủ yếu tập trung ở những thành phố này đẻ mà tối ưu hóa thì chứng ta nên đặt những kho hàng để mà việc trung chuyển có thể đucợ tiết kiệm nhiều hơn và khách hàng khi dặt hàng có thể nhận hàng nhanh chóng hơn và họ cũng đỡ việc phí hip nhận hàng của mình.
+
+
+
+
 
 
