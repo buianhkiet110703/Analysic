@@ -31,8 +31,8 @@ plt.show()
 ```
 output:
 
-![tên ảnh](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/294129672_3207277942844020_7132723186535871234_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=C-F9mgOJEioAX-zullu&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVIm_eAd1ZnkraWaKJuWXrXGcoJZ7y8FvvotwukvUIH5_w&oe=631EAFD3)
-Nhìn vào biểu đồ thì tình hình kinh doanh của công ty qua các năm có sự tăng trưởng mạnh mẽ, nguồn doanh thu tăng nhanh qua các năm, năm 2016 doanh thu chỉ vỏn vẹn là 6.470$, năm 2017 doanh thu tăng lên 8.456567$ và năm 2018 là 11362962$ từ đó ta thấy tổng giá trị đơn hàng mà công ty bán qua các năm tăng cao và mang lại rất nhiều doanh thu.
+![tên ảnh](https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.15752-9/298381806_1553753568375159_491650581988909281_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=PiNp49RhfR8AX8XSUL_&_nc_ht=scontent.fsgn2-6.fna&oh=03_AVJBN4CVGMVh_lTtDcWTmdl2VlHvwUIFDngBnxJzyuEZbg&oe=6328913A)
+Nhìn vào biểu đồ thì tình hình kinh doanh của công ty qua các năm có sự tăng trưởng mạnh mẽ, nguồn doanh thu tăng nhanh qua các năm, năm 2016 doanh thu chỉ vỏn vẹn là 6.470$, năm 2017 doanh thu tăng lên 8696300.44$ và năm 2018 là 11819953.66$ từ đó ta thấy tổng giá trị đơn hàng mà công ty bán qua các năm tăng cao và mang lại rất nhiều doanh thu.
 => Doanh thu của công ty tăng cao có thể thấy được tình hình kinh doanh của công ty có cải thiện tốt và phát triển mạnh qua các năm.
 #### B. Tình hình kinh doanh theo tháng
 ```php
@@ -90,13 +90,17 @@ sns.countplot(data= delivered_df,x='year');
 ```
 Output:
 ### Số đơn hàng bị hủy
-![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/292432145_2920740624738636_759369804800923362_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=qMVoerIKfC8AX_A9Gyk&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVLyYLFSJCVpsdOYX92Y7gVi6F_0mcAiN2Ei75fbPIlj_g&oe=6321DF34),
+![](![image](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/299288568_1243292613072239_1905932844111175389_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=15wiU7xa1_AAX-Lppm0&_nc_ht=scontent.fsgn2-5.fna&oh=03_AVJ5irZ9y9JwBp6gTfAC3K2EDhy8dpxA1xZlf4iZ6q-iZg&oe=6328950E),
 ### Số đơn hàng giao thành công
-![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/291624471_933935361334110_1112254248511624582_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=eq0re2sVOEkAX96gIsv&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVJYTD4Awgg3BwFHsVtTyJmKBBqQNxUwkxCkBhhMcMQNYQ&oe=631F96BE)
+![](https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.15752-9/295951985_1123734628559781_8122587935391695248_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_ohc=xrEQYTpjgX0AX9_b62i&_nc_ht=scontent.fsgn2-2.fna&oh=03_AVLbOE-xSub9L-LC7jbTlOQ2zknyMAhb9uQ3O8fzi9n3qg&oe=632A71FB)
 
--Nhìn vào biểu đồ đầu tiên số đơn hàng bị hủy rất ít chỉ dưới 10 đơn hàng.
--Nhìn vào biểu đồ thứ hai số đơn hàng giao thành công rất là nhiều chênh lệch với số đơn hàng bị hủy rất nhiều.
-=> tỷ lệ giao hàng thành công ty rất là cao cho thấy được tình trạng đơn hàng bị hủy bỏ hoặc bị boom hàng rất là ít, từ đó thấy được tình kinh doanh của công ty khá là ổn điịnh.
+-Nhìn vào biểu đồ đầu tiên số đơn hàng bị hủy trong 3 năm qua cũng tương đối là nhiều và tăng lên từng năm, chúng ta cần phải tìm ra nguyên nhân số đơn hàng bị hủy vì lý do gì và từ đó cần phải khắc phục để cho số đơn hàng bị hủy càng ít lại. Đây là những id khách hàng hủy đơn hàng nhiều nhất:
+
+![](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/293521629_635547081131475_7962482481532222686_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=3ZQGDPTNBOEAX_aMGJP&_nc_ht=scontent.fsgn2-5.fna&oh=03_AVKX-_2anpzI1XNP74oqonkP1riMMvp4e8-A_pYMQeqHNw&oe=63295FEA)
+
+    +Đây là những id khách hàng có số lần hủy đơn hàng nhiều nhất cần tìm hiểu nguyên nhân hủy đơn hàng từ họ vì lý do gì, và chúng ta cũng nên cảnh cáo họ đẻ cho họ giảm tỉ lệ hủy đơn hàng xuống bằng cách là những voucher khuyến mãi đối với những người này sẽ bị hạn chế và họ khó có thể nhận được những voucher giảm giá nhiều, hoặc là  thời gian vận chuyển của sẽ bị lâu hơn dự kiến, và  tài khoản đặt hàng sẽ bị hạn chế ở một số mặt hàng mà hj hủy nhiều...
+
+-Biểu đồ thứ hai thì số đơn hàng giao được cho khách hàng tăng lên qua các năm và dến thời điểm hiện tại 2018 con số đã đạt tới 6000 đơn hàng, số đơn hàng bán được cũng rất là nhiều trong thời gian qua.
 
 ### 4. Hình thức thanh toán
 ```php
@@ -107,9 +111,29 @@ Output:
 
 ![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/292601378_3248779772029624_5936993273079975103_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=d4y2rthoeHUAX9Rw4OW&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVIl9ubFshMyp2taBl_TY93485mlk31i7YxSc280iFFayA&oe=63212A13)
 
--Dựa vào biểu đò thì hình thức thanh toán mà khách hàng dùng để thanh toán nhiều nhất là credit_card, vì mình công ty thương mại điện tử chính vì thế khi thanh toán bằng credit_card khách hàng sẽ được hưởng một khoảng lợi nhuận từ nó, cho nên lượng khách thanh toán bằng credit_card sẽ là nhiều hơn các hình thức thanh toán khác.
+-Dựa vào biểu đò thì hình thức thanh toán mà khách hàng dùng để thanh toán nhiều nhất là credit_card, vì là công ty thương mại điện tử chính vì thế khi thanh toán bằng credit_card khách hàng sẽ được hưởng một khoảng lợi nhuận từ nó, cho nên lượng khách thanh toán bằng credit_card sẽ là nhiều hơn các hình thức thanh toán khác.
 
-### 5. Mức Hài Lòng của khách hàng.
+### 5. Tiêu đề đánh giá của khách hàng
+```php
+df.groupby('review_comment_title')['customer_id'].count().sort_values(ascending= False).nlargest(5).to_frame()
+```
+Output:
+
+![](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/299093127_825659951758048_1192841136745448186_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=h1ZHpg9F07wAX_fkAX6&_nc_ht=scontent.fsgn2-5.fna&oh=03_AVLDBYwUizxRgd19ty9t913ADKTzhZWcudU2gqO32eiH7Q&oe=632A189B)
+
+Dịch nghĩa các từ trong bảng:
+Recomendo: khuyên, đề nghị
+Bom: Tốt
+super recomendo: rất khuyên bạn nên
+Excelente : Tuyệt
+Muito bom : rất tốt
+
+- Nhìn vào bảng số liệu thì recomendo và super recomendo được khách hàng đánh giá khá là nhiều, điều đó cho thấy sản phẩm của seller_id(id người bán) chưa thật sự tốt
+ được khách hàng khuyên và đề nghị sửa đối, những người bán hàng nên tiếp cận và chăm sóc họ tìm ra được nguyên nhân của những sản phẩm không tốt ở đâu từ dó tiếp thu và cải thiện lại sản phẩm để cho đúng với nhu cầu của người mua, từ đó mới có thể tăng doanh thu bán hàng lên cao được.
+
+- Đối với những sản phẩm được khách hàng đánh giá tốt thì nên tiếp tục giữ vững chất lượng sản phẩm đó và tiếp tục phát triển chất lượng cao hơn nữa để kiếm được doanh thu nhiều hơn nữa
+
+### 6. Mức Hài Lòng của khách hàng.
 ```php
 star= df.groupby('review_score')['customer_id'].count().reset_index(name='count')
 ax= star['review_score']
@@ -124,7 +148,7 @@ Output:
 - Độ hài lòng của khách hàng với mức 4 và 5 điểm chiếm hơn 70% thì có thể thấy sản phẩm của công ty rất là tốt đáp ứng đúng với nhu cầu cảu khách hàng chúng ta cần phải duy trì và năng mức điểm này lên cao hơn nữa.
 -Đối với những sản ohaamr bị đánh giá 1 và 2 điểm thì chúng ta cần phải xem xét lại tại tao những sản phẩm này lại bị đánh giá thấp đến như vậy, cần tìm hiểu nguyên nhân do shop bán hàng có những sản phẩm kém chất lượng k đạt được sự hài lòng của khách hàng..
 
-### 6. Danh sách những nhóm sản phẩm bị đánh giá 1 và 2 điểm
+### 7. Danh sách những nhóm sản phẩm bị đánh giá 1 và 2 điểm
 ```php
 star12= df.loc[(df['review_score']== 1)|(df['review_score']==2)]
 pd.crosstab(star12.product_category_name, star12.review_score)
@@ -135,7 +159,7 @@ Output:
 
 -Đây là những danh sách nhóm sản phẩm bị đánh giá 1 và 2 điểm chúng ta phải tìm hiểu nguyên nhân từ những id của người bán hàng(seller_id) tại sao khách hàng lại đánh giá 1 và 2 điểm có số điểm thấp đến như vậy, chúng ta cần phải thu tập những  phản hồi của khách hàng, sau khi tìm hiểu nguyên nhân và khắc phục nếu mà những id người bán hàng này bán sản phẩm mà khách hàng vẫn còn đánh giá 1 và 2 điểm nhiều nữa thì chúng ta cần phải xem xét và xử lý việc này , tại vì khi mà khách hàng muốn mua một sản phẩm nào đó mà họ nhìn thấy những lượt chấm của những khách hàng thấp đến như vậy thì họ sẽ e ngại và k còn mua nữa, từ đó lượng khách hàng dùng cái dịch vụ thương mại điện tử của mình để mua hàng sẽ bị giảm xuống, chính vì thế mà chúng ta cần phải khắc phục việc người bán hàng giao đến những sản phẩm hư hỏng hoặc những sản phẩm kém chất lượng cho khách hàng. Do vậy, qua những phản hồi từ khách hàng, doanh nghiệp sẽ có cơ hội để hoàn thiện và làm thỏa mãn thị trường với những sản phẩm có giá trị hơn.
 
-### 7. Danh sách id người bán có lượt đánh giá 1 và 2 sao.
+### 8. Danh sách id người bán có lượt đánh giá 1 và 2 sao.
 ```php
 star12.groupby('seller_id')['review_score'].count().sort_values(ascending=False).nlargest(10).reset_index()
 ```
@@ -151,7 +175,7 @@ Output:
  
 Và công ty nên nói với nững id người bán đó khi mà bị đánh giá 1 và 2 sao thì số điểm thấp đó bị đẩy lên và sẽ làm hang mang cho những khách khác khi thấy lượt điểm thấp như vậy, họ sẽ mất niềm tin vào sản phẩm,có sự nghi ngờ về chất lượng và không đưa ra quyết định mua hàng sẽ làm cho doanh số đi xuống đơn hàng sẽ không còn được bán nhiều nữa, và đặc biệt là họ phải tự cải thiện sản phẩm của mình.
 
-### 8. Những khách hàng có số lần đặt hàng nhiều nhất.
+### 9. Những khách hàng có số lần đặt hàng nhiều nhất.
 ```php
 df.groupby('customer_id')['order_id'].count().sort_values(ascending=False).head(10).to_frame()
 ```
@@ -163,17 +187,17 @@ Output:
 Thông thường, người tiêu dùng đều có xu hướng lựa chọn mua hàng theo số đông. Vì vậy, khi một doanh nghiệp làm hài lòng nhóm khách hàng hiện tại, những người này sẽ đóng vai trò làm trung gian giới thiệu sản phẩm/ dịch vụ với những người quen biết của mình. Một cách vô tình, những khách hàng trung thành đã trở thành những nhân viên bán hàng cho sản phẩm của doanh nghiệp họ tin tưởng. 
 Điều này sẽ mang ý nghĩa sống còn với các doanh nghiệp kinh doanh thời đại 4.0, nơi sức mạnh của phương pháp marketing truyền miệng đang được thổi bùng cùng với sự phát triển của internet. Gần như chỉ cần chăm sóc tốt khách hàng hiện tại, bạn sẽ lại có thêm khách hàng mới.
 
-### 9. Danh sách những khách hàng đem lại doanh thu cao nhất cho công ty.
+### 10. Danh sách những khách hàng đem lại doanh thu cao nhất cho công ty.
 ![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/298147197_807309750277390_8941411742428927528_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=G0CQOvz2UX8AX8NefPQ&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVIBWnB6aM6XoZggImepUoEYL5sxc-glYpMfWwFFiM7IqA&oe=6321AAEE)
 
 -Đây là top 10 khách hàng đem lại chủ yếu doanh thu cho công ty, chúng ta cần chú ý và chăm sóc đặc biệt những khách hàng này nhiều hơn để họ không rời bỏ dịch vụ của mình, và cần tạo ra những cái voucher khuyến mãi tối ửu để có khuyến khích họ mua hàng của mình, vì họ là nguồn thu nhập chính của công ty nếu không chăm sóc tốt họ sẽ rời bỏ khi đó doanh thu công ty sẽ đi xuống. Tuy khách đặt hàng ở công ty nhiều nhưng dựa vào biểu đồ pareto thì thấy đucợ chỉ có 20% khách hàng đó đem lại chủ yêu 80% lợi nhuận của công ty nên vì thế cần phải chăm sóc đặt biệt những vị khách hàng này.
 
-### 10. Phần trăm khách hàng trả hóp và thanh toán một lần.
+### 11. Phần trăm khách hàng trả hóp và thanh toán một lần.
 ![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/299424191_1820247374984406_4949406095906604947_n.png?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=TcrlZJyMFFcAX9JhOfq&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVIZwmCB3_iOnUcxZnOg4BzEKYtRsXsstJfsbg4b5y7mEA&oe=63242986)
 
 -Số lần thanh toán một lần và thanh toán trả góp gần như tương đương nhau, nhưng đối với khách hàng trả góp chúng ta cần phải chú ý và cần nhắc nhở họ để học trả nợ và lãi đúng hạn, để tránh trường hợp làm phiền cả đôi bên mình phải gị điện và nhắn tin với họ và hpj sẽ cụng bị phiền bởi bởi những tin nhắn của mình và lãi của họ sẽ bị gia tăng theem nếu không trả đúng hạn.
 
-### 11. Những thành phố đem lại doanh thu cao nhất cho công ty
+### 12. Những thành phố đem lại doanh thu cao nhất cho công ty
 ```php
 df.groupby('customer_city')['payment_value'].sum().sort_values(ascending=False).to_frame().head(10)
 ```
