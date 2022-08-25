@@ -134,10 +134,9 @@ plt.pie(bx, labels=ax ,autopct='%1.1f%%');
 ```
 Output:
 
-![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/295655344_1146686159220152_8239129103048987975_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=wSJ0QizKBnkAX-9ya3n&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVIwoKiMQkAc7lmpkwHmwuWuWYAXf2tfNFhdHRMBLlFlaA&oe=6321A34B)
+![](https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.15752-9/300778288_3240178422907033_6041592468189111535_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=mIbyPsVTOcQAX-EjJSZ&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn2-3.fna&oh=03_AVL5_kDueRoXK2LVIZINilVEjLDK-ZFVfd2A9v1EuZP4Ug&oe=632C8967)
 
-- Độ hài lòng của khách hàng với mức 4 và 5 điểm chiếm hơn 70% thì có thể thấy sản phẩm của công ty rất là tốt đáp ứng đúng với nhu cầu cảu khách hàng chúng ta cần phải duy trì và năng mức điểm này lên cao hơn nữa.
--Đối với những sản ohaamr bị đánh giá 1 và 2 điểm thì chúng ta cần phải xem xét lại tại tao những sản phẩm này lại bị đánh giá thấp đến như vậy, cần tìm hiểu nguyên nhân do shop bán hàng có những sản phẩm kém chất lượng k đạt được sự hài lòng của khách hàng..
+-Đối với những nhóm sản phẩm bị đánh giá 1 và 2 điểm thì chúng ta cần phải xem xét lại , cần tìm hiểu nguyên nhân, và xem xét xem các đánh giá 1,2 đến từ nhóm sản phẩm nào/id người bán nào, từ đó cải thiện lại chất lượng sản phẩm cho đúng nhu cầu khách hàng.
 
 ### 7. Danh sách những nhóm sản phẩm bị đánh giá 1 và 2 điểm
 ```php
