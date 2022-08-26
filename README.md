@@ -84,7 +84,7 @@ Nhìn vào bảng tổng hợp, những nhóm sản phẩm ở trên bảng đó
 
 ![](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/293521629_635547081131475_7962482481532222686_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=3ZQGDPTNBOEAX_aMGJP&_nc_ht=scontent.fsgn2-5.fna&oh=03_AVKX-_2anpzI1XNP74oqonkP1riMMvp4e8-A_pYMQeqHNw&oe=63295FEA)
 
-    +Đây là những id khách hàng có số lần hủy đơn hàng nhiều nhất cần tìm hiểu nguyên nhân hủy đơn hàng từ họ vì lý do gì, và chúng ta cũng nên cảnh cáo họ đẻ cho họ giảm tỉ lệ hủy đơn hàng xuống bằng cách là những voucher khuyến mãi đối với những người này sẽ bị hạn chế và họ khó có thể nhận được những voucher giảm giá nhiều, hoặc là  thời gian vận chuyển của sẽ bị lâu hơn dự kiến, và  tài khoản đặt hàng sẽ bị hạn chế ở một số mặt hàng mà hj hủy nhiều...
+   -Đây là những id khách hàng có số lần hủy đơn hàng nhiều nhất cần tìm hiểu nguyên nhân hủy đơn hàng từ họ vì lý do gì, và chúng ta cũng nên cảnh cáo họ đẻ cho họ giảm tỉ lệ hủy đơn hàng xuống bằng cách là những voucher khuyến mãi đối với những người này sẽ bị hạn chế và họ khó có thể nhận được những voucher giảm giá nhiều, hoặc là  thời gian vận chuyển của sẽ bị lâu hơn dự kiến, và  tài khoản đặt hàng sẽ bị hạn chế ở một số mặt hàng mà hj hủy nhiều...
 
 -Biểu đồ thứ hai thì số đơn hàng giao được cho khách hàng tăng lên qua các năm và dến thời điểm hiện tại 2018 con số đã đạt tới 6000 đơn hàng, số đơn hàng bán được cũng rất là nhiều trong thời gian qua.
 
