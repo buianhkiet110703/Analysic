@@ -145,7 +145,7 @@ pd.crosstab(star12.product_category_name, star12.review_score).sort_values(by=1,
 ```
 Output:
 
-![](https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.15752-9/299283140_1151111955483866_513380656140068152_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_ohc=3BMqZPAU_QsAX9U8YAF&_nc_ht=scontent.fsgn2-2.fna&oh=03_AVKOpaGTjgNqk2pnYjaofKbyc-eR0oSbvQSt-yac1s4eMg&oe=632D3B4A)
+![](https://scontent-hkg4-2.xx.fbcdn.net/v/t1.15752-9/293984363_1753700474989259_7733036433922561168_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=FoPJlOkH5okAX9k7YT8&_nc_ht=scontent-hkg4-2.xx&oh=03_AVINXymKRs8eXD0zkc7RmZPN3F-z78SYS-q_E_MSjeh2Hw&oe=6330409D)
 
 Đây là những danh sách nhóm sản phẩm bị đánh giá 1 và 2 điểm.
 
