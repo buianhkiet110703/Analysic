@@ -141,11 +141,11 @@ Output:
 ### 7. Danh sách những nhóm sản phẩm bị đánh giá 1 và 2 điểm
 ```php
 star12= df.loc[(df['review_score']== 1)|(df['review_score']==2)]
-pd.crosstab(star12.product_category_name, star12.review_score)
+pd.crosstab(star12.product_category_name, star12.review_score).sort_values(by=1, ascending=False)
 ```
 Output:
 
-![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/299161731_390536316495381_2087884427408624672_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=69DWnicjnq8AX8qLcRk&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVJR2Ms9BC-jhlW6WDIGTZxcdZ5ZjwB6OyWZyQyBEAGekw&oe=632123DF)
+![](https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.15752-9/299283140_1151111955483866_513380656140068152_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_ohc=3BMqZPAU_QsAX9U8YAF&_nc_ht=scontent.fsgn2-2.fna&oh=03_AVKOpaGTjgNqk2pnYjaofKbyc-eR0oSbvQSt-yac1s4eMg&oe=632D3B4A)
 
 Đây là những danh sách nhóm sản phẩm bị đánh giá 1 và 2 điểm.
 
