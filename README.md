@@ -32,6 +32,7 @@ plt.show()
 output:
 
 ![tên ảnh](https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.15752-9/298381806_1553753568375159_491650581988909281_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=PiNp49RhfR8AX8XSUL_&_nc_ht=scontent.fsgn2-6.fna&oh=03_AVJBN4CVGMVh_lTtDcWTmdl2VlHvwUIFDngBnxJzyuEZbg&oe=6328913A)
+
  Tình hình kinh doanh của công ty qua các năm có sự tăng trưởng mạnh mẽ, nguồn doanh thu tăng nhanh qua các năm, năm 2016 doanh thu chỉ vỏn vẹn là 6.470$, năm 2017 doanh thu tăng lên 8.696.300$ (doanh thu năm 2017 tăng trưởng 134% so với năm 2016), và đến 9/2018 doanh thu là 11.819.953$( doanh thu 9/2018 tăng trưởng 36% so với năm 2017, và có mức tăng trưởng 182% so với năm 2016), doanh thu trong 3 năm qua đã đã có sự tăng trưởng đột biến, mặc dù chỉ tới quý III năm 2018 doanh thu đã tăng 182%, rất nhiều so với với 2 năm trước. Vì vậy thấy được công ty đã phát triển rất là mạnh mẽ, số dơn hàng bán được trong các năm qua đã tăng rất nhiều mang lại rất nhiều doanh thu cho công ty.
 => Doanh thu của công ty tăng cao có thể thấy được tình hình kinh doanh của công ty có cải thiện tốt và phát triển mạnh qua các năm.
 #### B. Tình hình kinh doanh theo tháng
