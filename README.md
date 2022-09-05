@@ -1,6 +1,10 @@
 # I. Bối Cảnh
 Bạn là một Data Analyst làm việc cho một công ty thương mại điện tử tên là X. Bạn được giao nhiệm vụ chuẩn bị một bài thuyết trình để trình bày tổng quan tình hình kinh doanh và vận hành của công ty tính đến thời điểm hiện tại cho Giám đốc bán hàng và Giám đốc vận hành. Bài thuyết trình tối thiểu phải bao gồm các thông tin sau: tổng quan tình hình kinh doanh, mức độ hài lòng của khách hàng, và đề xuất 2 đến 3 lĩnh vực (areas) mà công ty có thể cải thiện. 
 # II. Phân tích
+# Cây Logic Tree
+
+![Cây Logic Tree](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/291749804_1355260704879787_3177451409374303776_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=Q7ssUVlMDasAX_NyI2s&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn2-5.fna&oh=03_AVL2q-4FavLaULgec9N_5pA_aIxpIoc1PZnrU5Y3684exg&oe=633ACD03)
+
 ### 1. Tình hình kinh doanh theo năm và tháng của công ty
 Mã đoạn code của bảng tổng hợp
 ```php
