@@ -32,7 +32,7 @@ plt.show()
 output:
 
 ![tên ảnh](https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.15752-9/298381806_1553753568375159_491650581988909281_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=PiNp49RhfR8AX8XSUL_&_nc_ht=scontent.fsgn2-6.fna&oh=03_AVJBN4CVGMVh_lTtDcWTmdl2VlHvwUIFDngBnxJzyuEZbg&oe=6328913A)
-Nhìn vào biểu đồ thì tình hình kinh doanh của công ty qua các năm có sự tăng trưởng mạnh mẽ, nguồn doanh thu tăng nhanh qua các năm, năm 2016 doanh thu chỉ vỏn vẹn là 6.470$, năm 2017 doanh thu tăng lên 8.696.300$ (doanh thu năm 2017 tăng trưởng 134% so với năm 2016), và đến 9/2018 doanh thu là 11.819.953$( doanh thu 9/2018 tăng trưởng 36% so với năm 2017, và có mức tăng trưởng 182% so với năm 2016), doanh thu trong 3 năm qua đã đã có sự tăng trưởng đột biến, mặc dù chỉ tới quý III năm 2018 doanh thu đã tăng 182%, rất nhiều so với với 2 năm trước. Vì vậy thấy được công ty đã phát triển rất là mạnh mẽ, số dơn hàng bán được trong các năm qua đã tăng rất nhiều mang lại rất nhiều doanh thu cho công ty.
+ Tình hình kinh doanh của công ty qua các năm có sự tăng trưởng mạnh mẽ, nguồn doanh thu tăng nhanh qua các năm, năm 2016 doanh thu chỉ vỏn vẹn là 6.470$, năm 2017 doanh thu tăng lên 8.696.300$ (doanh thu năm 2017 tăng trưởng 134% so với năm 2016), và đến 9/2018 doanh thu là 11.819.953$( doanh thu 9/2018 tăng trưởng 36% so với năm 2017, và có mức tăng trưởng 182% so với năm 2016), doanh thu trong 3 năm qua đã đã có sự tăng trưởng đột biến, mặc dù chỉ tới quý III năm 2018 doanh thu đã tăng 182%, rất nhiều so với với 2 năm trước. Vì vậy thấy được công ty đã phát triển rất là mạnh mẽ, số dơn hàng bán được trong các năm qua đã tăng rất nhiều mang lại rất nhiều doanh thu cho công ty.
 => Doanh thu của công ty tăng cao có thể thấy được tình hình kinh doanh của công ty có cải thiện tốt và phát triển mạnh qua các năm.
 #### B. Tình hình kinh doanh theo tháng
 ```php
@@ -68,7 +68,7 @@ Output:
 
 ![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/298973734_404916611537800_103573572929499479_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=0PbBLbF8Uy0AX8wdI8a&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVKmUaCQa1_x9UBLkGOoyLhI-9sLpok612eoG8gSa11dog&oe=6322F1F0)
 
-Nhìn vào bảng tổng hợp, những nhóm sản phẩm ở trên bảng đó là nhóm sản phẩm bán chạy nhất và đem lại doanh thu cao nhất cho công ty. Đó là những sản phẩm thế mạnh của cửa hàng công ty vì doanh thu của công ty chủ yếu là do những nhóm sản phẩm đó đem lại. Vì vậy chúng ta cần phải tập trung nhiều nguồn lực để mà phát triển những sản phẩm thế mạnh của công ty mình lên nữa. Có thể phát triển bằng những ý sau đây:
+ Những nhóm sản phẩm ở trên bảng, đó là nhóm sản phẩm bán chạy nhất và đem lại doanh thu cao nhất cho công ty. Đó là những sản phẩm thế mạnh của cửa hàng công ty vì doanh thu của công ty chủ yếu là do những nhóm sản phẩm đó đem lại. Vì vậy chúng ta cần phải tập trung nhiều nguồn lực để mà phát triển những sản phẩm thế mạnh của công ty mình lên nữa. Có thể phát triển bằng những ý sau đây:
 
 - Sau khi đã biết những nhom sản phẩm thế mạnh bán chạy của công ty thì có thể:
   
