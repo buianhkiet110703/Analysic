@@ -172,9 +172,13 @@ Output:
 ![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/290608499_777055483432470_4269814101361728412_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=OUcv43ALdGoAX-q1jo1&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVJSpdA4S7AHDrfcxBW61GSoJJ7HwXlE8njWQtt0Aejnqg&oe=63230A5E)
 
 Đây là những danh sách id người bán có bán lượt rating 1 và 2 điểm cao nhất. Đối với trường hợp này thì công ty cần
+
 Bước 1: Phân loại các nguyên nhân từ rating 1 và 2 điểm. 
+
 Bước 2: Đề nghị seller giải trình về việc bị rating 1, 2 điểm. Seller cần trình bày hướng khắc phục hậu quả, cải thiện sản phẩm/dịch vụ và cam kết thực hiện. 
+
 Bước 3: Đền bù cho các khách hàng có trải nghiệm không tốt. (voucher, hoàn tiền, đổi trả sản phẩm,…)
+
 Bước 4: Đánh giá năng lực của seller. Nếu lượt rating  1, 2 điểm quá nhiều, seller không cải thiện sản phẩm, dịch vụ => cấm id seller. 
 
  
