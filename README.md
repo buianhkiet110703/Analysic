@@ -3,8 +3,8 @@ Bạn là một Data Analyst làm việc cho một công ty thương mại đi�
 # II. Phân tích
 # Cây Logic Tree
 
-![Cây Logic Tree](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/291749804_1355260704879787_3177451409374303776_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=Q7ssUVlMDasAX_NyI2s&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn2-5.fna&oh=03_AVL2q-4FavLaULgec9N_5pA_aIxpIoc1PZnrU5Y3684exg&oe=633ACD03)
-
+![Cây Logic Tree](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/300647649_621487449557107_8881590399658421509_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=0VhzuaN8kQ4AX_Cqplp&_nc_ht=scontent.fsgn2-5.fna&oh=03_AVL0gcg7jWxeuyTh4ksOSMOk9xB9O3hDhxR8IwKwg8flSQ&oe=633DF191)
+### Tình hình kinh doanh của công ty
 ### 1. Tình hình kinh doanh theo năm và tháng của công ty
 Mã đoạn code của bảng tổng hợp
 ```php
@@ -92,6 +92,8 @@ Output:
    -Đây là những id khách hàng có số lần hủy đơn hàng nhiều nhất cần tìm hiểu nguyên nhân hủy đơn hàng từ họ vì lý do gì, và chúng ta cũng nên cảnh cáo họ đẻ cho họ giảm tỉ lệ hủy đơn hàng xuống bằng cách là những voucher khuyến mãi đối với những người này sẽ bị hạn chế và họ khó có thể nhận được những voucher giảm giá nhiều, hoặc là  thời gian vận chuyển của sẽ bị lâu hơn dự kiến, và  tài khoản đặt hàng sẽ bị hạn chế ở một số mặt hàng mà hj hủy nhiều...
 
 -Biểu đồ thứ hai thì số đơn hàng giao được cho khách hàng tăng lên qua các năm và dến thời điểm hiện tại 2018 con số đã đạt tới 6000 đơn hàng, số đơn hàng bán được cũng rất là nhiều trong thời gian qua.
+
+### Mức độ hài lòng của khách hàng
 
 ### 4. Hình thức thanh toán
 ```php
@@ -221,7 +223,7 @@ Output:
 
 - Doanh thu của công ty chủ yếu tập trung ở những thành phố này, chứng tỏ khách hàng chủ yếu tập trung ở những thành phố này để mà tối ưu hóa thì chứng ta nên đặt những kho hàng để mà việc trung chuyển có thể được tiết kiệm nhiều hơn và khách hàng khi dặt hàng có thể nhận hàng nhanh chóng hơn và họ cũng đỡ việc phí hip nhận hàng của mình.
 
-
+### Đưa ra giải pháp cho công ty
 # III. Kết luận
 - Tình hình kinh doanh của công ty trong 3 năm trở lại đây có bước phát triển mãnh mẽ khi mà doanh thu tăng lên rất nhiều qua mỗi năm, số đơn hàng bán được cũng tăng lên đáng kể, nhưng doanh thu theo mỗi tháng có sự không đông đều khi mà những tháng đầu năm thì bán được rất là nhiều đơn hàng nhưng ngược lại những tháng ở cuối năm thì doanh thu lại bị giảm hơn chúng ta cần xem xét lại để cải thiện điều này. Đối với những nhóm sản phẩm đem lại doanh thu cao cho công ty thì cần tập trung nguồn lực để phát triển mạnh mẽ hơn nữa vì nó là thế mạnh của mình, còn với những khách hàng trả góp thì các nhân viên cần chú ý và nhắc nhở họ đóng nợ và tiền lãi đúng hạn, ngoài ra việc chăm sóc những khách hàng đem lại doanh thu cao cho công ty cũng rất quan trọng vì họ là nguồn sống của công ty nên vì thế cần phải có đội ngũ chăm sóc khách hàng dặc biệt đối với những người này.
 
