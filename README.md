@@ -218,7 +218,7 @@ df.groupby('customer_city')['payment_value'].sum().sort_values(ascending=False).
 
 ### 11. Phần trăm khách hàng trả hóp và thanh toán một lần.
 
-![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/299424191_1820247374984406_4949406095906604947_n.png?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=TcrlZJyMFFcAX9JhOfq&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVIZwmCB3_iOnUcxZnOg4BzEKYtRsXsstJfsbg4b5y7mEA&oe=63242986)
+![image](https://user-images.githubusercontent.com/110837675/201646035-819ac2db-5a6b-43c5-b3a1-394a18067ea6.png)
 
 -Số lần thanh toán một lần và thanh toán trả góp gần như tương đương nhau, nhưng đối với khách hàng trả góp chúng ta cần phải chú ý và cần nhắc nhở họ để học trả nợ và lãi đúng hạn, để tránh trường hợp làm phiền cả đôi bên mình phải gị điện và nhắn tin với họ và hpj sẽ cụng bị phiền bởi bởi những tin nhắn của mình và lãi của họ sẽ bị gia tăng theem nếu không trả đúng hạn.
 
@@ -228,7 +228,7 @@ df.groupby('customer_city')['payment_value'].sum().sort_values(ascending=False).
 ```
 Output:
 
-![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/295633015_837910750961643_107388182019235943_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=zRIOspSnbOoAX85A472&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVI8pdw7nFgYMxEL_FskAcPJjMfum3uGjRjTq2d1b9iAuA&oe=63231ACD)
+![image](https://user-images.githubusercontent.com/110837675/201646151-532014b0-4896-4977-922f-49a77649dbe7.png)
 
 - Doanh thu của công ty chủ yếu tập trung ở những thành phố này, chứng tỏ khách hàng chủ yếu tập trung ở những thành phố này để mà tối ưu hóa thì chứng ta nên đặt những kho hàng để mà việc trung chuyển có thể được tiết kiệm nhiều hơn và khách hàng khi dặt hàng có thể nhận hàng nhanh chóng hơn và họ cũng đỡ việc phí hip nhận hàng của mình.
 
