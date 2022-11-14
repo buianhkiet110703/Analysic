@@ -10,9 +10,8 @@ Mã đoạn code của bảng tổng hợp
 ```php
 turnover= pd.pivot_table(df,index='month', columns='year', values='payment_value', aggfunc=np.sum, fill_value=0).reset_index(drop= False)
 ```
-Output: 
+![image](https://user-images.githubusercontent.com/110837675/201594426-160a3d10-b32b-42d6-b80b-3ec0b2d62997.png)
 
-![tên ảnh](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/291134670_800840021084850_8783757632599999263_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=HUBUrVLkz0EAX_3rr57&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVKqDgvnwA-GwBZiMvKvbo8C94b5JaEz-qV97jCotAvsIw&oe=63203A54)
 #### A. Tình hình kinh doanh theo năm
 ```php
 turnover_year= df.groupby('year')['payment_value'].sum().reset_index()
@@ -35,7 +34,7 @@ plt.show()
 ```
 output:
 
-![tên ảnh](https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.15752-9/298381806_1553753568375159_491650581988909281_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=PiNp49RhfR8AX8XSUL_&_nc_ht=scontent.fsgn2-6.fna&oh=03_AVJBN4CVGMVh_lTtDcWTmdl2VlHvwUIFDngBnxJzyuEZbg&oe=6328913A)
+![image](https://user-images.githubusercontent.com/110837675/201594590-3739c064-2fa8-4adf-aa47-af60ed97f01b.png)
 
  Tình hình kinh doanh của công ty qua các năm có sự tăng trưởng mạnh mẽ, nguồn doanh thu tăng nhanh qua các năm, năm 2016 doanh thu chỉ vỏn vẹn là 6.470$, năm 2017 doanh thu tăng lên 8.696.300$ (doanh thu năm 2017 tăng trưởng 134% so với năm 2016), và đến 9/2018 doanh thu là 11.819.953$( doanh thu 9/2018 tăng trưởng 36% so với năm 2017, và có mức tăng trưởng 182% so với năm 2016), doanh thu trong 3 năm qua đã đã có sự tăng trưởng đột biến, mặc dù chỉ tới quý III năm 2018 doanh thu đã tăng 182%, rất nhiều so với với 2 năm trước. Vì vậy thấy được công ty đã phát triển rất là mạnh mẽ, số dơn hàng bán được trong các năm qua đã tăng rất nhiều mang lại rất nhiều doanh thu cho công ty.
 => Doanh thu của công ty tăng cao có thể thấy được tình hình kinh doanh của công ty có cải thiện tốt và phát triển mạnh qua các năm.
