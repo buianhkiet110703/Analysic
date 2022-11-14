@@ -60,7 +60,7 @@ plt.show()
 ```
 output:
 
-![Github](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/293831931_450349693677349_7679001683496339833_n.png?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=DpltahS9cU0AX9UHlBl&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVJWlUiSZmw_jwt7Q-kFEmfFPKbV9cXgQtYtt5hVMBdMUA&oe=631FE4AF)
+![image](https://user-images.githubusercontent.com/110837675/201618347-d13af184-dde8-4c39-8fa2-d708d47f97cc.png)
 
 - Doanh thu từ tháng 1 cho tới tháng 8 nhìn chung có sự tăng trưởng đồng đều, và doanh thu tháng 8 có sự tăng cao rõ rệt so với những tháng trước đó, tuy nhiên đây mới là 9/2018 chưa đủ dữ liệu để đánh giá các tháng sau tháng 9/2018,nhưng có thể thấy là doanh thu các tháng có sự tăng đều chứng tỏ công ty có sự phát triển tốt.
 
@@ -70,7 +70,7 @@ df.groupby('product_category_name')['payment_value'].sum().nlargest(10).reset_in
 ```
 Output:
 
-![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/298973734_404916611537800_103573572929499479_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=0PbBLbF8Uy0AX8wdI8a&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVKmUaCQa1_x9UBLkGOoyLhI-9sLpok612eoG8gSa11dog&oe=6322F1F0)
+![image](https://user-images.githubusercontent.com/110837675/201618412-00feb514-8a89-425f-978a-56f8facc8ad2.png)
 
  Những nhóm sản phẩm ở trên bảng, đó là nhóm sản phẩm bán chạy nhất và đem lại doanh thu cao nhất cho công ty. Đó là những sản phẩm thế mạnh của cửa hàng công ty vì doanh thu của công ty chủ yếu là do những nhóm sản phẩm đó đem lại. Vì vậy chúng ta cần phải tập trung nhiều nguồn lực để mà phát triển những sản phẩm thế mạnh của công ty mình lên nữa. Có thể phát triển bằng những ý sau đây:
 
@@ -82,15 +82,14 @@ Output:
 
 ### 3. Số đơn hàng giao thành công và bị hủy
 
-![](https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.15752-9/299864453_477595030880528_6114840701050237731_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=FWqaG774RV0AX-0s3aN&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn2-3.fna&oh=03_AVJ-JUNnf7EQfnq5SV7o4PV9y6VTSBZlFbsl69bc0Uk-eA&oe=632E343E)
+![image](https://user-images.githubusercontent.com/110837675/201618598-da610c8c-9357-4db5-b988-72871bd1520b.png)
 
 -Nhìn vào bảng số liệu, số đơn hàng bị hủy là 750 đơn chiếm 0.7% trong tổng số các đơn hàng giao thành công,chúng ta cần phải tìm ra nguyên nhân số đơn hàng bị hủy vì lý do gì và từ đó cần phải khắc phục để cho số đơn hàng bị hủy càng ít lại. Đây là những id khách hàng hủy đơn hàng nhiều nhất:
 
-![](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/293521629_635547081131475_7962482481532222686_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=3ZQGDPTNBOEAX_aMGJP&_nc_ht=scontent.fsgn2-5.fna&oh=03_AVKX-_2anpzI1XNP74oqonkP1riMMvp4e8-A_pYMQeqHNw&oe=63295FEA)
+![image](https://user-images.githubusercontent.com/110837675/201618700-5d16a9a3-01a7-4dc4-98a7-da06e5a424a7.png)
 
    -Đây là những id khách hàng có số lần hủy đơn hàng nhiều nhất cần tìm hiểu nguyên nhân hủy đơn hàng từ họ vì lý do gì, và chúng ta cũng nên cảnh cáo họ đẻ cho họ giảm tỉ lệ hủy đơn hàng xuống bằng cách là những voucher khuyến mãi đối với những người này sẽ bị hạn chế và họ khó có thể nhận được những voucher giảm giá nhiều, hoặc là  thời gian vận chuyển của sẽ bị lâu hơn dự kiến, và  tài khoản đặt hàng sẽ bị hạn chế ở một số mặt hàng mà hj hủy nhiều...
 
--Biểu đồ thứ hai thì số đơn hàng giao được cho khách hàng tăng lên qua các năm và dến thời điểm hiện tại 2018 con số đã đạt tới 6000 đơn hàng, số đơn hàng bán được cũng rất là nhiều trong thời gian qua.
 
 ### Mức độ hài lòng của khách hàng
 
@@ -101,7 +100,7 @@ sns.countplot(data=df, x='payment_type');
 ```
 Output:
 
-![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/292601378_3248779772029624_5936993273079975103_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=d4y2rthoeHUAX9Rw4OW&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVIl9ubFshMyp2taBl_TY93485mlk31i7YxSc280iFFayA&oe=63212A13)
+![image](https://user-images.githubusercontent.com/110837675/201619137-c9f1a7b4-728a-4f8c-8146-44751c6b1693.png)
 
 -Dựa vào biểu đò thì hình thức thanh toán mà khách hàng dùng để thanh toán nhiều nhất là credit_card, Vì mọi người thường có thói quen mua sắm online bằng thẻ tín dụng.
 
@@ -116,14 +115,19 @@ df.groupby('review_comment_title')['customer_id'].count().sort_values(ascending=
 ```
 Output:
 
-![](https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/299093127_825659951758048_1192841136745448186_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=h1ZHpg9F07wAX_fkAX6&_nc_ht=scontent.fsgn2-5.fna&oh=03_AVLDBYwUizxRgd19ty9t913ADKTzhZWcudU2gqO32eiH7Q&oe=632A189B)
+![image](https://user-images.githubusercontent.com/110837675/201619329-70623489-bde8-4e7f-be0a-da68e2db3179.png)
 
 Dịch nghĩa các từ trong bảng:
-Recomendo: khuyên, đề nghị
-Bom: Tốt
-super recomendo: rất khuyên bạn nên
-Excelente : Tuyệt
-Muito bom : rất tốt
+
+-Recomendo: khuyên, đề nghị
+
+-Bom: Tốt
+
+-super recomendo: rất khuyên bạn nên
+
+-Excelente : Tuyệt
+
+-Muito bom : rất tốt
 
 - Nhìn vào bảng số liệu thì recomendo và super recomendo được khách hàng đánh giá khá là nhiều, điều đó cho thấy sản phẩm của seller_id(id người bán) chưa thật sự tốt
  được khách hàng khuyên và đề nghị sửa đối, những người bán hàng nên tiếp cận và chăm sóc họ tìm ra được nguyên nhân của những sản phẩm không tốt ở đâu từ dó tiếp thu và cải thiện lại sản phẩm để cho đúng với nhu cầu của người mua, từ đó mới có thể tăng doanh thu bán hàng lên cao được.
@@ -140,7 +144,7 @@ plt.pie(bx, labels=ax ,autopct='%1.1f%%');
 ```
 Output:
 
-![](https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.15752-9/300778288_3240178422907033_6041592468189111535_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=mIbyPsVTOcQAX-EjJSZ&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn2-3.fna&oh=03_AVL5_kDueRoXK2LVIZINilVEjLDK-ZFVfd2A9v1EuZP4Ug&oe=632C8967)
+![image](https://user-images.githubusercontent.com/110837675/201619753-3ff64aaa-10d5-4824-af45-201175d646f9.png)
 
 -Đối với những nhóm sản phẩm bị đánh giá 1 và 2 điểm thì chúng ta cần phải xem xét lại , cần tìm hiểu nguyên nhân, và xem xét xem các đánh giá 1,2 đến từ nhóm sản phẩm nào/id người bán nào, từ đó cải thiện lại chất lượng sản phẩm cho đúng nhu cầu khách hàng.
 
@@ -151,7 +155,7 @@ pd.crosstab(star12.product_category_name, star12.review_score).sort_values(by=1,
 ```
 Output:
 
-![](https://scontent-hkg4-2.xx.fbcdn.net/v/t1.15752-9/293984363_1753700474989259_7733036433922561168_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=FoPJlOkH5okAX9k7YT8&_nc_ht=scontent-hkg4-2.xx&oh=03_AVINXymKRs8eXD0zkc7RmZPN3F-z78SYS-q_E_MSjeh2Hw&oe=6330409D)
+![image](https://user-images.githubusercontent.com/110837675/201619855-91f640ed-1779-4d9b-a161-48d14e32d8fd.png)
 
 Đây là những danh sách nhóm sản phẩm bị đánh giá 1 và 2 điểm.
 
@@ -170,7 +174,7 @@ star12.groupby('seller_id')['review_score'].count().sort_values(ascending=False)
 ```
 Output:
 
-![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/290608499_777055483432470_4269814101361728412_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=OUcv43ALdGoAX-q1jo1&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVJSpdA4S7AHDrfcxBW61GSoJJ7HwXlE8njWQtt0Aejnqg&oe=63230A5E)
+![image](https://user-images.githubusercontent.com/110837675/201619931-7d93d822-d47e-47da-bf76-c8355427cee8.png)
 
 Đây là những danh sách id người bán có bán lượt rating 1 và 2 điểm cao nhất. Đối với trường hợp này thì công ty cần
 
@@ -191,7 +195,7 @@ df.groupby('customer_id')['order_id'].count().sort_values(ascending=False).head(
 ```
 Output:
 
-![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/293642595_562114019042723_5262240882150269008_n.png?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=fdgqvoFyGowAX-aRDNM&tn=-Fc4noKWOTfEC8FP&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVJbF71WgCqmo1owq5rU2pAGGOplXqp7bXDQ5pR8bWxCKw&oe=632274FE)
+![image](https://user-images.githubusercontent.com/110837675/201620781-3073b600-f58e-46fb-86f1-c2287abe3013.png)
 - Đây là danh sách những khách có số lần đặt hàng nhiều nhất ở công ty, họ là những người tin tưởng những sản phẩm ở công ty nên cần phải chú trọng chăm sóc họ thường xuyên để họ không rời bỏ việc mua sản phẩm bên công ty mình.
 
 Thông thường, người tiêu dùng đều có xu hướng lựa chọn mua hàng theo số đông. Vì vậy, khi một doanh nghiệp làm hài lòng nhóm khách hàng hiện tại, những người này sẽ đóng vai trò làm trung gian giới thiệu sản phẩm/ dịch vụ với những người quen biết của mình. Một cách vô tình, những khách hàng trung thành đã trở thành những nhân viên bán hàng cho sản phẩm của doanh nghiệp họ tin tưởng. Điều này sẽ mang ý nghĩa sống còn với các doanh nghiệp kinh doanh thời đại 4.0, nơi sức mạnh của phương pháp marketing truyền miệng đang được thổi bùng cùng với sự phát triển của internet. Gần như chỉ cần chăm sóc tốt khách hàng hiện tại, sẽ lại có thêm khách hàng mới.
@@ -203,11 +207,17 @@ Các phương pháp chăm sóc có thể như:
 
 
 ### 10. Danh sách những khách hàng đem lại doanh thu cao nhất cho công ty.
-![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/298147197_807309750277390_8941411742428927528_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=G0CQOvz2UX8AX8NefPQ&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVIBWnB6aM6XoZggImepUoEYL5sxc-glYpMfWwFFiM7IqA&oe=6321AAEE)
+
+```php
+df.groupby('customer_city')['payment_value'].sum().sort_values(ascending=False).to_frame().head(10)
+```
+
+![image](https://user-images.githubusercontent.com/110837675/201620909-5e4baae9-41e7-49f5-9995-14a2645ea644.png)
 
 -Đây là top 10 khách hàng đem lại chủ yếu doanh thu cho công ty, chúng ta cần chú ý và chăm sóc đặc biệt những khách hàng này nhiều hơn để họ không rời bỏ dịch vụ của mình, và cần tạo ra những cái voucher khuyến mãi tối ửu để có khuyến khích họ mua hàng của mình, vì họ là nguồn thu nhập chính của công ty nếu không chăm sóc tốt họ sẽ rời bỏ khi đó doanh thu công ty sẽ đi xuống. Tuy khách đặt hàng ở công ty nhiều nhưng dựa vào biểu đồ pareto thì thấy đucợ chỉ có 20% khách hàng đó đem lại chủ yêu 80% lợi nhuận của công ty nên vì thế cần phải chăm sóc đặt biệt những vị khách hàng này.
 
 ### 11. Phần trăm khách hàng trả hóp và thanh toán một lần.
+
 ![](https://scontent.fsgn15-1.fna.fbcdn.net/v/t1.15752-9/299424191_1820247374984406_4949406095906604947_n.png?_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=TcrlZJyMFFcAX9JhOfq&_nc_ht=scontent.fsgn15-1.fna&oh=03_AVIZwmCB3_iOnUcxZnOg4BzEKYtRsXsstJfsbg4b5y7mEA&oe=63242986)
 
 -Số lần thanh toán một lần và thanh toán trả góp gần như tương đương nhau, nhưng đối với khách hàng trả góp chúng ta cần phải chú ý và cần nhắc nhở họ để học trả nợ và lãi đúng hạn, để tránh trường hợp làm phiền cả đôi bên mình phải gị điện và nhắn tin với họ và hpj sẽ cụng bị phiền bởi bởi những tin nhắn của mình và lãi của họ sẽ bị gia tăng theem nếu không trả đúng hạn.
