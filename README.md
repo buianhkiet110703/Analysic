@@ -9,37 +9,38 @@ You are a Data Analyst working for an e-commerce company called X. You are given
 ### 1. Business situation by year and month of the company (Tình hình kinh doanh theo năm và tháng của công ty)
 
 ```php
-turnover= pd.pivot_table(df,index='month', columns='year', values='payment_value', aggfunc=np.sum, fill_value=0).reset_index(drop= False)
+import matplotlib.ticker as mtick
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
+
+ax = turnover.T.plot.bar(figsize=(15,10), xlabel="Years", ylabel="Payment_value", color=sns.color_palette('Set2'))
+ax.yaxis.set_major_formatter(mtick.StrMethodFormatter('{x:,.0f}'))
+ax.set_xlabel('Years',fontsize=20)
+ax.set_ylabel('Payment Value', fontsize=20)
+ax.set_xticklabels(ax.get_xticklabels(), rotation=0, ha='center')
+plt.show()
 ```
-![image](https://user-images.githubusercontent.com/110837675/201594426-160a3d10-b32b-42d6-b80b-3ec0b2d62997.png)
+![image](https://user-images.githubusercontent.com/110837675/226807037-ff44e509-7594-4bad-8253-4e75370a6508.png)
 
 #### A. Business situation by year (Tình hình kinh doanh theo năm)
 ```php
-turnover_year= df.groupby('year')['payment_value'].sum().reset_index()
-xs,ys= turnover_year['year'], turnover_year['payment_value']
-plt.figure(figsize=(15,10))
-plt.bar(xs,ys, color= sns.color_palette('Paired'));
-plt.xlabel('year')
-plt.ylabel('payment_value')
-for x,y in zip(xs,ys):
-    
-        label = "{:.2f}".format(y)
+import plotly.express as px
 
-        plt.annotate(label, # this is the text
-                    (x,y), # these are the coordinates to position the label
-                    textcoords="offset points", # how to position the text
-                    xytext=(0,10), # distance from text to points (x,y)
-                    ha='center') # horizontal alignment can be left, right or center
+turnover_year = df.groupby('year')['payment_value'].sum().reset_index()
 
-plt.show()
+fig = px.bar(turnover_year, x='year', y='payment_value', title='Revenue By Month')
+
+fig.update_layout(xaxis=dict(type='category'),width=900,height=700,font=dict(color='black'))
+fig.update_traces(marker=dict(line=dict(width=50)),text=turnover_year['payment_value'],textfont=dict(color='black'))
+fig.show()
 ```
 output:
 
-![image](https://user-images.githubusercontent.com/110837675/201594590-3739c064-2fa8-4adf-aa47-af60ed97f01b.png)
+![image](https://user-images.githubusercontent.com/110837675/226799131-02b61b01-05c8-45e6-a4b2-9925f390ec04.png)
 
- The company's business situation over the years has grown stronger, the revenue source has increased rapidly over the years, in 2016 the revenue was only 6,470 USD, in 2017 the revenue increased to 8,696,300 USD (revenue). In 2017 grew by 134% compared to 2016), and by September 2018 the revenue was $11,819,953 (September 2018 revenue grew by 36% compared to 2017, and had a growth of 182% compared to 2016). ). Therefore, the company has grown very strong, the number of sales orders in recent years has increased a lot, bringing a lot of revenue to the company.
+ The company's business situation over the years has grown stronger, the revenue source has increased rapidly over the years, in 2016 the revenue was only $18202,78 USD, in 2017 the revenue increased to $2124535.1 USD (revenue). And by September 2018 the revenue was $2659783,53 (September 2018 revenue grew by 25.2% compared to 2017). Therefore, the company has grown very strong, the number of sales orders in recent years has increased a lot, bringing a lot of revenue to the company.
  
- (Tình hình kinh doanh của công ty qua các năm có sự tăng trưởng mạnh mẽ, nguồn doanh thu tăng nhanh qua các năm, năm 2016 doanh thu chỉ vỏn vẹn là 6.470$, năm 2017 doanh thu tăng lên 8.696.300$ (doanh thu năm 2017 tăng trưởng 134% so với năm 2016), và đến 9/2018 doanh thu là 11.819.953$( doanh thu 9/2018 tăng trưởng 36% so với năm 2017, và có mức tăng trưởng 182% so với năm 2016), doanh thu trong 3 năm qua đã đã có sự tăng trưởng đột biến, mặc dù chỉ tới quý III năm 2018 doanh thu đã tăng 182%, rất nhiều so với với 2 năm trước. Vì vậy thấy được công ty đã phát triển rất là mạnh mẽ, số dơn hàng bán được trong các năm qua đã tăng rất nhiều mang lại rất nhiều doanh thu cho công ty.)
+ (Tình hình kinh doanh của công ty qua các năm có sự tăng trưởng mạnh mẽ, nguồn doanh thu tăng nhanh qua các năm, năm 2016 doanh thu chỉ vỏn vẹn là $18202,78 , năm 2017 doanh thu tăng lên $2124535,1 . Và đến 9/2018 doanh thu là $2659783,53( doanh thu 9/2018 tăng trưởng 36% so với năm 2017, và có mức tăng trưởng 182% so với năm 2016), doanh thu trong 3 năm qua đã đã có sự tăng trưởng đột biến, rất nhiều so với với 2 năm trước. Vì vậy thấy được công ty đã phát triển rất là mạnh mẽ, số dơn hàng bán được trong các năm qua đã tăng rất nhiều mang lại rất nhiều doanh thu cho công ty.)
  
 => The company's high revenue shows that the company's business situation has improved and developed strongly over the years.
 
@@ -48,27 +49,15 @@ output:
 #### B. Business situation by month (Tình hình kinh doanh theo tháng)
 
 ```php
+import plotly.express as px
 turnover_month= df.groupby('month')['payment_value'].sum().reset_index()
-x,y= turnover_month['month'], turnover_month['payment_value']
-plt.figure(figsize=(15,10))
-plt.plot(x,y)
-plt.xlabel('month')
-plt.ylabel('payment_value')
-for a,b in zip(x,y):
-    
-        label = "{:.2f}".format(b)
-
-        plt.annotate(label, # this is the text
-                    (a,b), # these are the coordinates to position the label
-                    textcoords="offset points", # how to position the text
-                    xytext=(0,10), # distance from text to points (x,y)
-                    ha='center') # horizontal alignment can be left, right or center
-
-plt.show()
+fig= px.line(turnover_month,x='month',y='payment_value', markers=True, title='Revenue By Month')
+fig.update_traces(marker=dict(line=dict(width=10)),text=turnover_year['payment_value'],textfont=dict(color='black'))
+fig.show()
 ```
 output:
 
-![image](https://user-images.githubusercontent.com/110837675/201618347-d13af184-dde8-4c39-8fa2-d708d47f97cc.png)
+![image](https://user-images.githubusercontent.com/110837675/226800408-c21a3a11-4462-4032-9317-4da4328bb53d.png)
 
 - Revenue from January to August generally has a uniform growth, and August revenue has a marked increase compared to the previous months, but this is only September 2018 not enough data to evaluate. Prices in the months after September 2018, but it can be seen that the increase in monthly revenue shows that the company has a good development.
 
@@ -77,13 +66,18 @@ output:
 ### 2. Top product groups (product_category_name) bring the most revenue for the company (Top nhóm sản phẩm (product_category_name) mang lại doanh thu nhiều nhất cho công ty)
 
 ```php
-df.groupby('product_category_name')['payment_value'].sum().nlargest(10).reset_index()
+import plotly.graph_objs as go
+
+fig = go.Figure(
+    data=[go.Pie(labels=product['product_category_name'], values=product['payment_value'], pull=[0.09, 0])])
+fig.update_layout(title="Percentage Revenue By Product_Category",width=1140, height=600, legend_title_text='Product Category Name')
+fig.show()
 ```
 Output:
 
-![image](https://user-images.githubusercontent.com/110837675/201618412-00feb514-8a89-425f-978a-56f8facc8ad2.png)
+![image](https://user-images.githubusercontent.com/110837675/226800499-02eee2f8-bd62-4642-87a1-cdd38a08da9e.png)
 
-The product groups above the table are the best-selling and highest-recall product groups for the company. Those are the strong products of the company store because the company's revenue is mainly due to those product groups falling behind. Therefore, we need to focus more resources to develop our company's strong products. The following ideas can be developed:
+The product groups above the graphic are the best-selling and highest-recall product groups for the company. Those are the strong products of the company store because the company's revenue is mainly due to those product groups falling behind. Therefore, we need to focus more resources to develop our company's strong products. The following ideas can be developed:
  
 (Những nhóm sản phẩm ở trên bảng, đó là nhóm sản phẩm bán chạy nhất và đem lại doanh thu cao nhất cho công ty. Đó là những sản phẩm thế mạnh của cửa hàng công ty vì doanh thu của công ty chủ yếu là do những nhóm sản phẩm đó đem lại. Vì vậy chúng ta cần phải tập trung nhiều nguồn lực để mà phát triển những sản phẩm thế mạnh của công ty mình lên nữa. Có thể phát triển bằng những ý sau đây:)
 
@@ -99,13 +93,28 @@ The product groups above the table are the best-selling and highest-recall produ
 
 ### 3. Number of orders delivered successfully and canceled (Số đơn hàng giao thành công và bị hủy)
 
-![image](https://user-images.githubusercontent.com/110837675/201618598-da610c8c-9357-4db5-b988-72871bd1520b.png)
+```php
+fig= px.pie(values=delivered['proportion'],names=delivered.index, hole=.3, title='Order Status')
+fig.update_layout(annotations=[dict(text='Status', x=0.50, y=0.5, font_size=20, showarrow=False)])
+fig.update_layout(
+    width=1140,
+    height=600, legend_title_text='Status')
+fig.show()
+```
+![image](https://user-images.githubusercontent.com/110837675/226800799-a2f2e271-d275-4073-9ae8-f8d23e0f2243.png)
 
--Looking at the data table, the number of canceled orders is 750 orders, accounting for 0.7% of the total number of successfully delivered orders, we need to find out the reason why the orders are canceled for any reason and from there we need to fix it. To minimize the number of canceled orders. These are the customer ids who cancel the most orders:
+-Looking at the Graphic , the number of canceled orders is 123 orders, accounting for45.89% of the total number of successfully delivered orders, we need to find out the reason why the orders are canceled for any reason and from there we need to fix it. To minimize the number of canceled orders. These are the customer ids who cancel the most orders:
 
-(Nhìn vào bảng số liệu, số đơn hàng bị hủy là 750 đơn chiếm 0.7% trong tổng số các đơn hàng giao thành công,chúng ta cần phải tìm ra nguyên nhân số đơn hàng bị hủy vì lý do gì và từ đó cần phải khắc phục để cho số đơn hàng bị hủy càng ít lại. Đây là những id khách hàng hủy đơn hàng nhiều nhất:)
+(Nhìn vào bảng số liệu, số đơn hàng bị hủy là 123 đơn chiếm 45.89% trong tổng số các đơn hàng giao thành công,chúng ta cần phải tìm ra nguyên nhân số đơn hàng bị hủy vì lý do gì và từ đó cần phải khắc phục để cho số đơn hàng bị hủy càng ít lại. Đây là những id khách hàng hủy đơn hàng nhiều nhất:)
+```php
+fig= px.pie(values=customer_cancel['order_status'],names=customer_cancel['customer_id'], hole=.3, title='CustomerId_Cancel')
+fig.update_layout(annotations=[dict(text='Cancel', x=0.50, y=0.5, font_size=20, showarrow=False)])
+fig.update_layout(
+    width=1140,
+    height=600,legend_title_text='Customer_id')
+```
 
-![image](https://user-images.githubusercontent.com/110837675/201618700-5d16a9a3-01a7-4dc4-98a7-da06e5a424a7.png)
+![image](https://user-images.githubusercontent.com/110837675/226801089-a5d3fdbf-c57c-47fe-9fa2-17dcaac9eb4c.png)
 
    -These are the customer ids with the most order cancellations, need to find out the reason for canceling orders from them, and we should also warn them to help them reduce the cancellation rate by is that the promotional vouchers for these people will be limited and they are unlikely to receive much discount vouchers, or the shipping time will be longer than expected, and the order account will be limited. In some articles, which have been cancelled a lot...
 
@@ -114,12 +123,16 @@ The product groups above the table are the best-selling and highest-recall produ
 ### 4. Payments (Hình thức thanh toán)
 
 ```php
-plt.figure(figsize=(12,6))
-sns.countplot(data=df, x='payment_type');
+payment_type= df.groupby('payment_type')['customer_id'].count().reset_index()
+fig= px.bar(payment_type, x="payment_type",y='customer_id',title='Payment Type of customer')
+fig.update_layout(xaxis=dict(type='category'), width=1000, height=700)
+fig.update_traces(marker=dict(line=dict(width=0.6)))
+fig.show()
 ```
 Output:
 
-![image](https://user-images.githubusercontent.com/110837675/201619137-c9f1a7b4-728a-4f8c-8146-44751c6b1693.png)
+![image](https://user-images.githubusercontent.com/110837675/226801448-ac80ff3e-8f51-43fe-87ba-bffb73d80567.png)![image](https://user-images.githubusercontent.com/110837675/226801447-3a7451a8-0009-4b19-9187-e3bb8a851149.png)
+
 
 -Based on the chart, the form of payment that customers use the most to pay is credit_card, because people often have the habit of shopping online with credit cards.
 
@@ -134,13 +147,19 @@ Output:
 ### 5. Customer review title (Tiêu đề đánh giá của khách hàng)
 
 ```php
-df.groupby('review_comment_title')['customer_id'].count().sort_values(ascending= False).nlargest(5).to_frame()
+tile=df['review_comment_title'].value_counts().nlargest(10).reset_index()
+plt.figure(figsize=(20,10))
+plt.bar(tile['index'],tile['review_comment_title'], color= sns.color_palette('viridis'))
+plt.title('Top 10 Most Evaluate titles by the Customer',fontsize=20)
+plt.xlabel('Title', fontsize=20) 
+plt.ylabel('count', fontsize=20) 
+plt.show()
 ```
 Output:
 
-![image](https://user-images.githubusercontent.com/110837675/201619329-70623489-bde8-4e7f-be0a-da68e2db3179.png)
+![image](https://user-images.githubusercontent.com/110837675/226801618-add017bc-56ce-4c1d-b9c2-b1c60247d9f9.png)
 
-Translate the meanings of the words in the table (Dịch nghĩa các từ trong bảng:)
+Translate the meanings of the words in the graphic (Dịch nghĩa các từ trong bảng:)
 
 -Recomendo: khuyên, đề nghị
 
@@ -165,15 +184,14 @@ Translate the meanings of the words in the table (Dịch nghĩa các từ trong 
 ### 6.Customer Satisfaction Level. (Mức Độ Hài Lòng của khách hàng.)
 
 ```php
-star= df.groupby('review_score')['customer_id'].count().reset_index(name='count')
-ax= star['review_score']
-bx= star['count']
-plt.figure(figsize=(15,6))
-plt.pie(bx, labels=ax ,autopct='%1.1f%%');
+fig = go.Figure(data=[go.Pie(labels=star['review_score'], values=star['count'], pull=[0.1, 0.2, 0, 0, 0])])
+fig.update_layout(title="Number of star customer evaluate")
+fig.update_layout(height=600, width=1130,legend_title_text='Star')
+fig.show()
 ```
 Output:
 
-![image](https://user-images.githubusercontent.com/110837675/201619753-3ff64aaa-10d5-4824-af45-201175d646f9.png)
+![image](https://user-images.githubusercontent.com/110837675/226801881-81e6d259-88f7-4eea-85dc-a801d5ee5dbb.png)
 
 -For product groups that are rated 1 and 2 points, we need to reconsider, need to find out the reason, and consider which product group 1,2 reviews come from / seller id, thereby improving product quality to meet the needs of customers.
 
@@ -182,15 +200,20 @@ Output:
 ### 7. List of product groups rated 1 and 2 points (Danh sách những nhóm sản phẩm bị đánh giá 1 và 2 điểm)
 
 ```php
-star12= df.loc[(df['review_score']== 1)|(df['review_score']==2)]
-pd.crosstab(star12.product_category_name, star12.review_score).sort_values(by=1, ascending=False)
+
+star12 = df.loc[(df['review_score'] == 1) | (df['review_score'] == 2)]
+star12 = pd.crosstab(star12.product_category_name, star12.review_score).sort_values(by=1, ascending=False)
+star12 = star12.nlargest(columns=[1,2], n=3)
+
+fig = px.bar(star12, x=star12.index, y=[1,2], labels={'x': 'Product Category', 'y': 'Number of Reviews'})
+fig.update_layout(title="Number of 1- and 2-Star Reviews By Product Category", legend_title_text='star')
+fig.show()
 ```
 Output:
 
-![image](https://user-images.githubusercontent.com/110837675/201619855-91f640ed-1779-4d9b-a161-48d14e32d8fd.png)
+![image](https://user-images.githubusercontent.com/110837675/226801940-c753d0d0-13e6-4a03-aa1a-88e8d392b5c5.png)
 
-
-These are lists of product groups that are rated 1 and 2 points. (Đây là những danh sách nhóm sản phẩm bị đánh giá 1 và 2 điểm.)
+These are graphic of top 3 product groups that are rated 1 and 2 points. (Đây là những danh sách nhóm sản phẩm bị đánh giá 1 và 2 điểm.)
 
 Step 1: We have to find out the reason from the seller id (seller_id) why customers rate 1 and 2 points.
 (Bước 1: Chúng ta phải tìm hiểu nguyên nhân từ những id của người bán hàng(seller_id) tại sao khách hàng lại đánh giá 1 và 2 điểm.)
@@ -208,13 +231,18 @@ Step 4: If the reason for evaluating 1 2 points is legitimate, it is necessary t
 ### 8. List of seller ids with 1 and 2 star reviews. (Danh sách id người bán có lượt đánh giá 1 và 2 sao.)
 
 ```php
-star12.groupby('seller_id')['review_score'].count().sort_values(ascending=False).nlargest(10).reset_index()
+star12 = df.loc[(df['review_score'] == 1) | (df['review_score'] == 2)]
+star12= star12.groupby('seller_id')['review_score'].count().sort_values(ascending=False).nlargest(5).reset_index()
+fig = go.Figure(data=[go.Pie(labels=star12['seller_id'], values=star12['review_score'],pull=[0, 0.1, 0, 0, 0])])
+fig.update_layout(title="1 And 2 Rated Star Of Seller Id")
+fig.update_layout(height=600, width=1130, legend_title_text='Seller_id')
+fig.show()
 ```
 Output:
 
-![image](https://user-images.githubusercontent.com/110837675/201619931-7d93d822-d47e-47da-bf76-c8355427cee8.png)
+![image](https://user-images.githubusercontent.com/110837675/226802119-772f396f-b894-4a64-8a3b-c67db9bf3a81.png)
 
-These are the seller id lists with the highest ratings of 1 and 2. In this case, the company needs 
+These are top5 the seller id  with the highest ratings of 1 and 2. In this case, the company needs 
 (Đây là những danh sách id người bán có bán lượt rating 1 và 2 điểm cao nhất. Đối với trường hợp này thì công ty cần)
 
 Step 1: Classify the causes from rating 1 and 2 points. 
@@ -237,15 +265,20 @@ And should warn seller id, when being rated 1 and 2 stars, that low score will b
 ### 9. Customers with the most orders. (Những khách hàng có số lần đặt hàng nhiều nhất.)
 
 ```php
-df.groupby('customer_id')['order_id'].count().sort_values(ascending=False).head(10).to_frame()
+df['payment_installments']= df['payment_installments'].apply(lambda x:'pay one' if x ==1 else 'pay installments')
+top_10_customers = df['customer_id'].value_counts().head(10)
+top_10_df = df[df['customer_id'].isin(top_10_customers.index)]
+fig = px.histogram(top_10_df, x='customer_id', color='payment_installments',title='Customer ID have most order')
+fig.update_layout(width=1150, height= 700)
+fig.show()
 ```
 Output:
 
-![image](https://user-images.githubusercontent.com/110837675/201620781-3073b600-f58e-46fb-86f1-c2287abe3013.png)
+![image](https://user-images.githubusercontent.com/110837675/226802365-743c07ea-c439-4629-8994-4e8f525025ed.png)
 
-- This is a list of customers with the highest number of orders at the company, they are the ones who believe in the company's products, so it is necessary to pay attention to taking care of them regularly so that they do not leave buying products from the company. own company.
+- This is a graphic of top 10 customers with the highest number of orders at the company, they are the ones who believe in the company's products, so it is necessary to pay attention to taking care of them regularly so that they do not leave buying products from the company. own company.
 
-(Đây là danh sách những khách có số lần đặt hàng nhiều nhất ở công ty, họ là những người tin tưởng những sản phẩm ở công ty nên cần phải chú trọng chăm sóc họ thường xuyên để họ không rời bỏ việc mua sản phẩm bên công ty mình.)
+(Đây là biểu đồ của 10 khách có số lần đặt hàng nhiều nhất ở công ty, họ là những người tin tưởng những sản phẩm ở công ty nên cần phải chú trọng chăm sóc họ thường xuyên để họ không rời bỏ việc mua sản phẩm bên công ty mình.)
 
 Usually, consumers tend to choose to buy in bulk. Therefore, when a business satisfies the existing group of customers, these people will act as intermediaries to introduce products / services to their acquaintances. Unwittingly, loyal customers have become salespeople for the products of the businesses they trust. This will be vital to business enterprises in the 4.0 era, where the power of word-of-mouth marketing is being blown along with the development of the internet. Almost just need to take good care of existing customers, will have more new customers.
 Treatments may include:
@@ -261,10 +294,21 @@ Các phương pháp chăm sóc có thể như:)
 ### 10. List of customers who bring the highest revenue for the company. (Danh sách những khách hàng đem lại doanh thu cao nhất cho công ty.)
 
 ```php
-df.groupby('customer_city')['payment_value'].sum().sort_values(ascending=False).to_frame().head(10)
+df_sorted = df.groupby('customer_id')['payment_value'].sum().sort_values(ascending= False).reset_index().nlargest(columns='payment_value',n=10)
+df_sorted['cumulative_percent'] = 100 * df_sorted['payment_value'].cumsum() / df_sorted['payment_value'].sum()
+# create the bar chart for the payment values
+bar_chart = go.Bar(x=df_sorted['customer_id'], y=df_sorted['payment_value'])
+
+# create the line chart for the cumulative percentage
+line_chart = go.Scatter(x=df_sorted['customer_id'], y=df_sorted['cumulative_percent'], yaxis='y2', name='% Cumulative')
+# set the layout for the chart
+layout = go.Layout(title='Top 10 Customers Who Bring Highest Revenue', yaxis=dict(title='Payment Value'), yaxis2=dict(title='% Cumulative', overlaying='y', side='right'), width=1150, height=600, margin=dict(l=50, r=50, b=50, t=50), plot_bgcolor='#f8f8f8')
+# create the figure and plot the chart
+fig = go.Figure(data=[bar_chart, line_chart], layout=layout)
+fig.show()
 ```
 
-![image](https://user-images.githubusercontent.com/110837675/201620909-5e4baae9-41e7-49f5-9995-14a2645ea644.png)
+![image](https://user-images.githubusercontent.com/110837675/226802529-83dae0be-4855-4ec9-89de-b671e407bec5.png)
 
 -These are the top 10 customers that bring the main revenue to the company, we need to pay special attention and care to these customers so that they do not leave our services, and need to create promotional vouchers. Best forever to encourage them to buy their products, because they are the main source of income for the company, if not well taken care of, they will leave then the company's revenue will go down. Although customers order from the company a lot, but based on the Pareto chart, it can be seen that only 20% of those customers bring in 80% of the company's profits, so it is necessary to take special care of these customers.
 
@@ -272,7 +316,16 @@ df.groupby('customer_city')['payment_value'].sum().sort_values(ascending=False).
 
 ### 11. Percentage of customers paying in a lump sum and one-time payment. (Phần trăm khách hàng trả hóp và thanh toán một lần.)
 
-![image](https://user-images.githubusercontent.com/110837675/201646035-819ac2db-5a6b-43c5-b3a1-394a18067ea6.png)
+```php
+fig= px.pie(values=tile['payment_installments'],names=tile['index'], hole=.3, title='Paying in a lump sum and one-time payment')
+fig.update_layout(annotations=[dict(text='Payments', x=0.50, y=0.5, font_size=20, showarrow=False)])
+fig.update_layout(
+    width=1140,
+    height=600, legend_title_text='Payments')
+fig.show()
+```
+![image](https://user-images.githubusercontent.com/110837675/226803861-9f8c26ab-8901-43b1-9cfd-98fb825a95af.png)
+
 
 -The number of one-time payments and installment payments are almost the same, but for installment customers, we need to pay attention and remind them to learn to pay debt and interest on time, to avoid annoying cases. both of us have to call and text them and hpj will both be bothered by my messages and their interest will increase if not paid on time.
 
@@ -281,11 +334,20 @@ df.groupby('customer_city')['payment_value'].sum().sort_values(ascending=False).
 ### 12. Cities that bring in the highest revenue for the company (Những thành phố đem lại doanh thu cao nhất cho công ty)
 
 ```php
-df.groupby('customer_city')['payment_value'].sum().sort_values(ascending=False).to_frame().head(10)
+# create the bar chart for the payment values
+bar_chart = go.Bar(x=data_sorted['customer_city'], y=df_sorted['payment_value'])
+
+# create the line chart for the cumulative percentage
+line_chart = go.Scatter(x=data_sorted['customer_city'], y=data_sorted['cumulative_percent'], yaxis='y2', name='% Cumulative')
+# set the layout for the chart
+layout = go.Layout(title='Top 10 City That Bring The Highest Revenue', yaxis=dict(title='Payment Value'), yaxis2=dict(title='% Cumulative', overlaying='y', side='right'), width=1150, height=600, margin=dict(l=50, r=50, b=50, t=50), plot_bgcolor='#f8f8f8')
+# create the figure and plot the chart
+fig = go.Figure(data=[bar_chart, line_chart], layout=layout)
+fig.show()
 ```
 Output:
 
-![image](https://user-images.githubusercontent.com/110837675/201646151-532014b0-4896-4977-922f-49a77649dbe7.png)
+![image](https://user-images.githubusercontent.com/110837675/226806929-250ca3f4-31a0-4148-bb92-cc12ec381595.png)
 
 - The company's revenue is mainly concentrated in these cities, proving that customers are mainly concentrated in these cities for optimization, it is advisable to place warehouses so that transshipment can be saved. Save more and customers when ordering can receive their goods faster and they also save on their shipping costs.
 
