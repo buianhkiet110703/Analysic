@@ -148,16 +148,13 @@ Output:
 
 ```php
 tile=df['review_comment_title'].value_counts().nlargest(10).reset_index()
-plt.figure(figsize=(20,10))
-plt.bar(tile['index'],tile['review_comment_title'], color= sns.color_palette('viridis'))
-plt.title('Top 10 Most Evaluate titles by the Customer',fontsize=20)
-plt.xlabel('Title', fontsize=20) 
-plt.ylabel('count', fontsize=20) 
-plt.show()
+fig = px.treemap(tile, path=[px.Constant('Review Comment Title'),'index'], values='review_comment_title')
+fig.show()
 ```
 Output:
 
-![image](https://user-images.githubusercontent.com/110837675/226801618-add017bc-56ce-4c1d-b9c2-b1c60247d9f9.png)
+![image](https://user-images.githubusercontent.com/110837675/226882999-87545479-1d8d-4153-a0ee-63cc66b862bd.png)
+
 
 Translate the meanings of the words in the graphic (Dịch nghĩa các từ trong bảng:)
 
