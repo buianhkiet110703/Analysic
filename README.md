@@ -131,7 +131,7 @@ fig.show()
 ```
 Output:
 
-![image](https://user-images.githubusercontent.com/110837675/226801448-ac80ff3e-8f51-43fe-87ba-bffb73d80567.png)![image](https://user-images.githubusercontent.com/110837675/226801447-3a7451a8-0009-4b19-9187-e3bb8a851149.png)
+![image](https://user-images.githubusercontent.com/110837675/226801448-ac80ff3e-8f51-43fe-87ba-bffb73d80567.png)
 
 
 -Based on the chart, the form of payment that customers use the most to pay is credit_card, because people often have the habit of shopping online with credit cards.
