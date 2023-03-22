@@ -211,7 +211,7 @@ fig.show()
 ```
 Output:
 
-![image](https://user-images.githubusercontent.com/110837675/226801940-c753d0d0-13e6-4a03-aa1a-88e8d392b5c5.png)
+![image](https://user-images.githubusercontent.com/110837675/226807507-4a83294f-9d88-441b-a40e-7060f864493c.png)
 
 These are graphic of top 3 product groups that are rated 1 and 2 points. (Đây là những danh sách nhóm sản phẩm bị đánh giá 1 và 2 điểm.)
 
